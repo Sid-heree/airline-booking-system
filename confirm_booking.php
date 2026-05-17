@@ -5,7 +5,12 @@ $username = "root";
 $password = "";
 $dbname = "airline";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn =  new mysqli(
+    "sql302.infinityfree.com",
+    "if0_41946592",
+    "eKj2YjvmVuMUs0",
+    "if0_41946592_airline"
+);
 
 
 if ($conn->connect_error) {
@@ -107,7 +112,7 @@ if ($conn->connect_error) {
                         <input type="hidden" name="date" value="<?php echo $date; ?>">
                     </div>
                     <div class="col-md-6">
-                        <strong>Price:</strong> $<?php echo number_format($price, 2); ?>
+                        <strong>Price:</strong> <?php echo number_format($price, 2); ?>
                         <input type="hidden" name="price" value="<?php echo $price; ?>">
                     </div>
                 </div>
